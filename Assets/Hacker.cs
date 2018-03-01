@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Hacker : MonoBehaviour {
-
-    int level = 0;
+    string[] wilNamen = { "Henk", "sjaak", "harry" };
+    //int level = 0;
 
 	// Use this for initialization
 	void Start () {
-		Terminal.WriteLine("Hi");
+        int wilIndex = Random.Range(0, wilNamen.Length); //rnd.Next(0, wilNamen.Length);
+		Terminal.WriteLine(wilNamen[wilIndex]);
 	}
 	
 	// Update is called once per frame
